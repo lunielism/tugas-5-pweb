@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Sports Nation</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <!-- CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/parallax.js/1.5.0/parallax.min.css">
+<!--FAVICON-->
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="favicon_io/site.webmanifest">
+    
+  </head>
+  <style>
+    p {
+      text-align: justify;
+    }
+
+    h2 {
+      font-weight: bold;
+      font-family: "Helvetica Neue", sans-serif;
+      font-size: 70px;
+    }
+    *{
+      font-family: "Helvetica Neue", sans-serif;
+
+    }
+    nav {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px 100px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid black;
+      background-color: #F0EABE;
+      font-family: 'Helvetica Neue', sans-serif;
+    }
+    body {
+      background-image: url("img/bg.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+
+  </style>
+  <body><!-- Navbar --><nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">
+    <span class="navbar-toggler-icon"></span>
+    <img src="img/logo.png" alt="Logo" width="40" height="40" class="d-inline-block align-top">
+    <img src="img/logo-t.png" alt="Logo" width="90" height="40" class="d-inline-block align-top">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon" style="color:black;"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav mr-auto"></ul>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link text-white" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="#">Product</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="#">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="#">Account</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="#">
+          <i class="fas fa-shopping-bag"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+    
+    <br><br><br>
+    <div class="container my-5 mx-auto">
+      <div class="row">
+        <!-- Kolom teks -->
+        <div class="col-lg-6 mx-auto fade-in">
+          <h2>Unleash Your Inner Athlete with Sports Nation.</h2>
+          <p class="dark">Sports Nation adalah toko online terpercaya untuk semua kebutuhan olahraga Anda, mulai dari pakaian, sepatu, aksesori, hingga perlengkapan dan peralatan olahraga. Dapatkan produk berkualitas tinggi dari merek-merek terkemuka dengan harga yang terjangkau. Jangan lewatkan kesempatan untuk meningkatkan performa olahraga Anda dengan produk-produk terbaik dari Sports Nation. Explore sekarang!</p>
+          <button class="btn" style="background-color: #5A8F7B; color: white;">Explore Now&nbsp;&nbsp;&nbsp;<i class="fas fa-long-arrow-alt-right"></i></button>
+        </div>
+        <!-- Kolom gambar -->
+        <div class="col-lg-6 my-6">
+          <img src="img/mj-2.png" alt="Gambar" class="img-fluid parallax" data-depth="0.2">
+        </div>
+      </div>
+    </div>
+
+
+  
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax.js/1.5.0/parallax.min.js"></script>
+    <script>
+    const button = document.querySelector(".btn");
+
+    button.addEventListener("mouseover", function() {
+      this.style.backgroundColor = "#4B7B6F";
+    });
+
+    button.addEventListener("mouseout", function() {
+      this.style.backgroundColor = "#5A8F7B";
+    });
+
+        // membuat efek parallax pada gambar di kolom gambar
+    $(window).on('scroll', function(){
+      var scrollTop = $(this).scrollTop();
+      $('.col-lg-6.my-6 img').css('transform', 'translateY(' + scrollTop / 3 + 'px)');
+    });
+
+    // membuat efek fade in pada teks
+    $(window).on('load', function(){
+      $('.col-lg-6.mx-auto').addClass('fade-in');
+    });
+
+    // membuat efek scroll pada navbar
+    $(window).on('scroll', function(){
+      if($(window).scrollTop()){
+        $('nav').addClass('navbar-scroll');
+      }
+      else{
+        $('nav').removeClass('navbar-scroll');
+      }
+    });
+
+    // menambahkan animasi ketika navbar toggle button diklik
+    $('.navbar-toggler').on('click', function(){
+      $('.navbar-toggler-icon').toggleClass('active');
+    });
+
+    // menambahkan animasi pada tombol explore now
+    $('.btn').hover(function(){
+      $(this).addClass('animate__animated animate__pulse');
+    }, function(){
+      $(this).removeClass('animate__animated animate__pulse');
+    });
+
+    // Menentukan warna teks acak
+    function randomColor() {
+      var colors = ["red", "orange", "yellow", "green", "blue", "purple"];
+      var randomIndex = Math.floor(Math.random() * colors.length);
+      return colors[randomIndex];
+    }
+
+    // Efek saat mouse diarahkan pada heading
+    var heading = document.querySelector("h2");
+    heading.addEventListener("mouseover", function() {
+      this.style.color = randomColor();
+    });
+
+    // Efek saat mouse meninggalkan heading
+    heading.addEventListener("mouseout", function() {
+      this.style.color = "black";
+    });
+
+    // Efek saat mouse diarahkan pada teks di bawahnya
+    var paragraphs = document.querySelectorAll("p");
+    paragraphs.forEach(function(paragraph) {
+      paragraph.addEventListener("mouseover", function() {
+        this.style.color = randomColor();
+      });
+      
+      paragraph.addEventListener("mouseout", function() {
+        this.style.color = "black";
+      });
+    });
+
+
+</script>
+  </body>
+  <br><br><br><br><br><br><br><br>
+  <footer class="bg-dark text-white pt-3 pb-2">
+    <div class="container">
+      <br>
+      <div class="row">
+        <div class="col-md-4">
+          <h5>Ikuti Kami</h5>
+          <ul class="list-unstyled">
+            <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>Layanan Pelanggan</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Kebijakan Pengiriman</a></li>
+            <li><a href="#">Kebijakan Pengembalian</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>Informasi</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Kebijakan Privasi</a></li>
+            <li><a href="#">Syarat dan Ketentuan</a></li>
+            <li><a href="#">Hubungi Kami</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <p class="text-muted">&copy; Sports Nation 2023</p>
+        </div>
+        <div class="col-md-6">
+          <p class="text-muted text-right">Dikembangkan oleh <a href="#">SportsNation.inc</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
